@@ -1,0 +1,377 @@
+{
+  "id": "vasileios_aristoteles",
+  "version": "1.0",
+  "title": "Βασίλειος & Αριστοτέλης",
+  "subtitle": "Φιλοσοφία, Επιστήμη και Οικολογία",
+
+  "characters": {
+    "vasileios": {
+      "displayName": "Μέγας Βασίλειος",
+      "shortName": "Βασίλειος",
+      "color": "#8B4513"
+    },
+    "aristoteles": {
+      "displayName": "Αριστοτέλης",
+      "shortName": "Αριστοτέλης",
+      "color": "#1a4a8b"
+    }
+  },
+
+  "acts": [
+
+    {
+      "id": "act_intro",
+      "title": "Εισαγωγή",
+      "type": "cinematic",
+      "camera": {
+        "shot": "wide",
+        "unrealSequence": "/Game/Cinematics/VA_Intro"
+      },
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_ancient_athens",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_caesarea",
+          "transition": "fade"
+        }
+      },
+      "narration": {
+        "text": "Δύο κόσμοι. Επτά αιώνες απόσταση. Μία συνομιλία που δεν έγινε ποτέ — αλλά θα έπρεπε.",
+        "audioUrl": "{{narration_intro}}",
+        "subtitle": true
+      },
+      "dialogues": [
+        {
+          "id": "d_intro_01",
+          "speaker": "aristoteles",
+          "text": "Λέγεται πως σπούδασες στην Αθήνα. Ποιος σε ώθησε να έρθεις στον τόπο μας;",
+          "audioUrl": "{{audio_aristoteles_01}}",
+          "animation": "gesture_welcome",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_intro_02",
+          "speaker": "vasileios",
+          "text": "Η δίψα για σοφία. Αλλά και η ανάγκη να καταλάβω τι διαχωρίζει τη γνώση από την αλήθεια.",
+          "audioUrl": "{{audio_vasileios_01}}",
+          "animation": "gesture_thoughtful",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        }
+      ]
+    },
+
+    {
+      "id": "act_similarities",
+      "title": "Ομοιότητες — Η Τάξη του Κόσμου",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_cosmos_order",
+          "transition": "slide"
+        },
+        "screen_right": {
+          "contentId": "img_hexaemeron",
+          "transition": "slide"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_sim_01",
+          "speaker": "aristoteles",
+          "text": "Παρατήρησα πως ο κόσμος έχει τάξη. Κάθε ον έχει τον σκοπό του — το τέλος του. Αυτό ονομάζω τελεολογία.",
+          "audioUrl": "{{audio_aristoteles_sim_01}}",
+          "animation": "gesture_explain",
+          "camera": "close_aristoteles",
+          "subtitle": true,
+          "highlightTerm": {
+            "term": "τελεολογία",
+            "definition": "Η θεωρία ότι κάθε ον κινείται προς έναν σκοπό/τέλος",
+            "displayOnScreen": "screen_right"
+          }
+        },
+        {
+          "id": "d_sim_02",
+          "speaker": "vasileios",
+          "text": "Συμφωνώ. Στη Ἑξαήμερο γράφω ακριβώς αυτό — κάθε πλάσμα έχει τον ρόλο του στη δημιουργία. Η μέλισσα, ο αετός, ακόμα και το σκουλήκι.",
+          "audioUrl": "{{audio_vasileios_sim_01}}",
+          "animation": "gesture_agree",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_sim_03",
+          "speaker": "aristoteles",
+          "text": "Η παρατήρηση της φύσης είναι ιερή πράξη. Έγραψα για 500 είδη ζώων. Η φύση δεν κάνει τίποτα μάταια.",
+          "audioUrl": "{{audio_aristoteles_sim_02}}",
+          "animation": "idle_thinking",
+          "camera": "medium_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Τι σε ενδιαφέρει να εξερευνήσεις;",
+        "displayStyle": "radial_menu",
+        "choices": [
+          {
+            "id": "choice_science",
+            "label": "Η σχέση επιστήμης και πίστης",
+            "icon": "icon_science",
+            "nextAct": "act_science_faith"
+          },
+          {
+            "id": "choice_ecology",
+            "label": "Οικολογικές προεκτάσεις",
+            "icon": "icon_ecology",
+            "nextAct": "act_ecology"
+          },
+          {
+            "id": "choice_differences",
+            "label": "Οι διαφορές τους",
+            "icon": "icon_debate",
+            "nextAct": "act_differences"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_differences",
+      "title": "Διαφορές — Αιωνιότητα vs Δημιουργία",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_eternal_cosmos",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_creation_ex_nihilo",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_diff_01",
+          "speaker": "aristoteles",
+          "text": "Ο κόσμος είναι αιώνιος. Δεν γεννήθηκε, δεν θα πεθάνει. Ο Πρώτος Κινητής τον κινεί χωρίς να τον αγγίζει.",
+          "audioUrl": "{{audio_aristoteles_diff_01}}",
+          "animation": "gesture_firm",
+          "camera": "close_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_diff_02",
+          "speaker": "vasileios",
+          "text": "Εκεί διαφωνούμε ριζικά. Ο κόσμος δημιουργήθηκε εκ του μηδενός — εξ nihilo. Ο Θεός δεν είναι απλώς κινητής, είναι Δημιουργός.",
+          "audioUrl": "{{audio_vasileios_diff_01}}",
+          "animation": "gesture_disagree",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_diff_03",
+          "speaker": "aristoteles",
+          "text": "Εντούτοις, και οι δύο συμφωνούμε ότι υπάρχει μια αρχή πέρα από την ύλη. Ίσως η διαφορά μας είναι μικρότερη από ό,τι νομίζουμε.",
+          "audioUrl": "{{audio_aristoteles_diff_02}}",
+          "animation": "gesture_concede",
+          "camera": "medium_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_ecology",
+            "label": "Οικολογικές προεκτάσεις →",
+            "nextAct": "act_ecology"
+          },
+          {
+            "id": "to_science",
+            "label": "Επιστήμη & Πίστη →",
+            "nextAct": "act_science_faith"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_ecology",
+      "title": "Οικολογία — Η Ευθύνη απέναντι στη Φύση",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "video_deforestation",
+          "type": "video",
+          "transition": "fade",
+          "autoplay": true,
+          "loop": false
+        },
+        "screen_right": {
+          "contentId": "img_natural_world",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_eco_01",
+          "speaker": "vasileios",
+          "text": "Κοίτα αυτές τις εικόνες. Οι άνθρωποι καταστρέφουν ό,τι τους δόθηκε ως δώρο. Η Γη δεν ανήκει σε εμάς — είμαστε οικονόμοι της.",
+          "audioUrl": "{{audio_vasileios_eco_01}}",
+          "animation": "gesture_concern",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_eco_02",
+          "speaker": "aristoteles",
+          "text": "Η φύση έχει σκοπό — και η καταστροφή της είναι καταστροφή του σκοπού. Ο άνθρωπος που αφανίζει ένα είδος, καταστρέφει μέρος της τάξης.",
+          "audioUrl": "{{audio_aristoteles_eco_01}}",
+          "animation": "gesture_serious",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_eco_03",
+          "speaker": "vasileios",
+          "text": "Για μένα η οικολογία είναι πνευματικό ζήτημα. Για σένα φιλοσοφικό. Αλλά το συμπέρασμα είναι το ίδιο: η ανθρώπινη πλεονεξία είναι το πρόβλημα.",
+          "audioUrl": "{{audio_vasileios_eco_02}}",
+          "animation": "gesture_agree",
+          "camera": "wide_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_science",
+            "label": "Επιστήμη & Πίστη →",
+            "nextAct": "act_science_faith"
+          },
+          {
+            "id": "to_closing",
+            "label": "Προς την κατακλείδα →",
+            "nextAct": "act_closing"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_science_faith",
+      "title": "Επιστήμη & Πίστη — Σύγκρουση ή Συμπλήρωμα;",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_aristoteles_biology",
+          "transition": "slide"
+        },
+        "screen_right": {
+          "contentId": "img_hexaemeron_manuscript",
+          "transition": "slide"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_sci_01",
+          "speaker": "aristoteles",
+          "text": "Η γνώση ξεκινά από τις αισθήσεις. Παρατηρώ, καταγράφω, συμπεραίνω. Αυτή είναι η μέθοδος.",
+          "audioUrl": "{{audio_aristoteles_sci_01}}",
+          "animation": "gesture_explain",
+          "camera": "close_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_sci_02",
+          "speaker": "vasileios",
+          "text": "Και εγώ παρατηρώ. Αλλά η παρατήρηση μου οδηγεί σε δέος — όχι μόνο σε κατανόηση. Η επιστήμη χωρίς θαυμασμό είναι τυφλή.",
+          "audioUrl": "{{audio_vasileios_sci_01}}",
+          "animation": "gesture_passionate",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_sci_03",
+          "speaker": "aristoteles",
+          "text": "Το θαυμάζειν — η έκπληξη — είναι η αρχή της φιλοσοφίας. Σε αυτό συμφωνούμε απολύτως.",
+          "audioUrl": "{{audio_aristoteles_sci_02}}",
+          "animation": "gesture_smile",
+          "camera": "medium_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_closing",
+            "label": "Κατακλείδα →",
+            "nextAct": "act_closing"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_closing",
+      "title": "Κατακλείδα",
+      "type": "cinematic",
+      "camera": {
+        "shot": "wide_slow_pullback",
+        "unrealSequence": "/Game/Cinematics/VA_Closing"
+      },
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_both_portraits",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_earth_from_space",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_close_01",
+          "speaker": "aristoteles",
+          "text": "Έχουμε περισσότερα κοινά από ό,τι νόμιζα.",
+          "audioUrl": "{{audio_aristoteles_close_01}}",
+          "animation": "gesture_bow",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_close_02",
+          "speaker": "vasileios",
+          "text": "Η αναζήτηση της αλήθειας δεν έχει εποχή. Ούτε σύνορα.",
+          "audioUrl": "{{audio_vasileios_close_01}}",
+          "animation": "gesture_bow",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        }
+      ],
+      "narration": {
+        "text": "Δύο άνθρωποι. Δύο παραδόσεις. Μία πρόσκληση: να σκεφτούμε τον κόσμο με σεβασμό.",
+        "audioUrl": "{{narration_closing}}",
+        "subtitle": true
+      },
+      "endCard": {
+        "display": true,
+        "backgroundImage": "img_both_portraits",
+        "lines": [
+          "Μέγας Βασίλειος (330–379 μ.Χ.) — Επίσκοπος Καισαρείας, Πατέρας της Εκκλησίας",
+          "Αριστοτέλης (384–322 π.Χ.) — Φιλόσοφος, Πατέρας της Φυσικής Επιστήμης"
+        ],
+        "nextScenario": null
+      }
+    }
+
+  ]
+}
