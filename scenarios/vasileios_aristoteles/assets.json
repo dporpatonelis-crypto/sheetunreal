@@ -1,0 +1,210 @@
+﻿{
+  "_comment": "Αυτό το αρχείο παράγεται αυτόματα από το Google Sheet μέσω GitHub Actions sync.",
+  "_sheetInfo": "Κάθε γραμμή του Sheet αντιστοιχεί σε ένα asset. Το id είναι το κλειδί που χρησιμοποιείται στο scenario.json με {{id}}.",
+  "assets": {
+    "img_ancient_athens": {
+      "type": "image",
+      "label": "Αρχαία Αθήνα — Ακρόπολη",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen",
+      "credit": "Public Domain"
+    },
+    "img_caesarea": {
+      "type": "image",
+      "label": "Καισάρεια — Βυζαντινή πόλη",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen",
+      "credit": "Public Domain"
+    },
+    "img_cosmos_order": {
+      "type": "image",
+      "label": "Τάξη του Σύμπαντος — Αριστοτέλης",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen",
+      "credit": "Public Domain"
+    },
+    "img_hexaemeron": {
+      "type": "image",
+      "label": "Εξαήμερος — Χειρόγραφο Βασιλείου",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen",
+      "credit": "Βιβλιοθήκη Βατικανού"
+    },
+    "img_eternal_cosmos": {
+      "type": "image",
+      "label": "Αιώνιος Κόσμος — Αριστοτελική κοσμολογία",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen"
+    },
+    "img_creation_ex_nihilo": {
+      "type": "image",
+      "label": "Δημιουργία εκ του μηδενός",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen"
+    },
+    "img_aristoteles_biology": {
+      "type": "image",
+      "label": "Αριστοτέλης — Βιολογικές Μελέτες",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen"
+    },
+    "img_hexaemeron_manuscript": {
+      "type": "image",
+      "label": "Εξαήμερος — Χειρόγραφο",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen"
+    },
+    "img_natural_world": {
+      "type": "image",
+      "label": "Φυσικός κόσμος — Βιοποικιλότητα",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen"
+    },
+    "img_both_portraits": {
+      "type": "image",
+      "label": "Πορτρέτα Βασιλείου και Αριστοτέλη",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen"
+    },
+    "img_earth_from_space": {
+      "type": "image",
+      "label": "Γη από το Διάστημα",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen"
+    },
+    "video_deforestation": {
+      "type": "video",
+      "label": "Αποψίλωση δασών — σύγχρονες εικόνες",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen",
+      "duration": 30,
+      "loop": false
+    },
+    "audio_aristoteles_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Εισαγωγικός χαιρετισμός",
+      "url": "https://drive.google.com/uc?export=download&id=1Nc6rCqfXfm-rj6nhilKIQAiwU6bppg72",
+      "speaker": "aristoteles",
+      "dialogueId": "d_intro_01",
+      "duration": 4.5
+    },
+    "audio_vasileios_01": {
+      "type": "audio",
+      "label": "Βασίλειος — Απάντηση εισαγωγής",
+      "url": "https://drive.google.com/uc?export=download&id=1S2Yxae-9jooQv9M1bbNfA162WxLf1Ed-",
+      "speaker": "vasileios",
+      "dialogueId": "d_intro_02",
+      "duration": 5.2
+    },
+    "audio_aristoteles_sim_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Τελεολογία",
+      "url": "https://drive.google.com/uc?export=download&id=19vBPN6ZpMV-rKuNnSTJ94d6z4c8mN8nA",
+      "speaker": "aristoteles",
+      "dialogueId": "d_sim_01"
+    },
+    "audio_vasileios_sim_01": {
+      "type": "audio",
+      "label": "Βασίλειος — Εξαήμερος",
+      "url": "https://drive.google.com/uc?export=download&id=1OFlJGO9O4qfrdC1007qMNFri0oRysSQL",
+      "speaker": "vasileios",
+      "dialogueId": "d_sim_02"
+    },
+    "audio_aristoteles_eco_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Οικολογία",
+      "url": "https://drive.google.com/uc?export=download&id=1CrcHAIOuk3BSjCUfQ26gZ7LeUpMZfDPe",
+      "speaker": "aristoteles",
+      "dialogueId": "d_eco_02"
+    },
+    "audio_vasileios_eco_01": {
+      "type": "audio",
+      "label": "Βασίλειος — Οικονόμοι της Γης",
+      "url": "https://drive.google.com/uc?export=download&id=1bHEU6NklhEcWPWq80MP8r4_TCFNZ_jbE",
+      "speaker": "vasileios",
+      "dialogueId": "d_eco_01"
+    },
+    "audio_vasileios_eco_02": {
+      "type": "audio",
+      "label": "Βασίλειος — Πλεονεξία",
+      "url": "https://drive.google.com/uc?export=download&id=1_-EIrTu6AMNkL6FMJPoKEyliuMp5pXfP",
+      "speaker": "vasileios",
+      "dialogueId": "d_eco_03"
+    },
+    "narration_intro": {
+      "type": "audio",
+      "label": "Narration — Εισαγωγή",
+      "url": "https://drive.google.com/uc?export=download&id=1TU1Lv_nb4O4U4uVN_vMxulUxE_QNhPqd",
+      "speaker": "narrator"
+    },
+    "narration_closing": {
+      "type": "audio",
+      "label": "Narration — Κατακλείδα",
+      "url": "https://drive.google.com/uc?export=download&id=1KJgfnGBYuGHTXQ-InPXxPkPFetfTxFOA",
+      "speaker": "narrator"
+    },
+    "audio_aristoteles_sim_02": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Παρατήρηση φύσης (500 είδη)",
+      "url": "https://drive.google.com/uc?export=download&id=1KE0f51ObYfZco2srVBwnM3Yrvlp-2kcx",
+      "speaker": "aristoteles",
+      "dialogueId": "d_sim_03"
+    },
+    "audio_aristoteles_diff_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Αιώνιος κόσμος",
+      "url": "https://drive.google.com/uc?export=download&id=1vPYr0LlB6WWU5VPaGgCLPK1i__kZFAo-",
+      "speaker": "aristoteles",
+      "dialogueId": "d_diff_01"
+    },
+    "audio_aristoteles_diff_02": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Αρχή πέρα από ύλη",
+      "url": "https://drive.google.com/uc?export=download&id=1bQnP_CCaUZcgxZok5G7YPI-yMiQSqF3w",
+      "speaker": "aristoteles",
+      "dialogueId": "d_diff_03"
+    },
+    "audio_aristoteles_sci_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Μέθοδος παρατήρησης",
+      "url": "https://drive.google.com/uc?export=download&id=1Nw7KSvLCL7Tuef7okM92yoiUEUXhSoTo",
+      "speaker": "aristoteles",
+      "dialogueId": "d_sci_01"
+    },
+    "audio_aristoteles_sci_02": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Θαυμάζειν",
+      "url": "https://drive.google.com/uc?export=download&id=1vaE1yQdm7gn0p9Qo6HpQWk7Oxyv85Gpw",
+      "speaker": "aristoteles",
+      "dialogueId": "d_sci_03"
+    },
+    "audio_aristoteles_close_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — Κατακλείδα",
+      "url": "https://drive.google.com/uc?export=download&id=1R8eFHSs8yn4TkI-ByDA9Nxj2bOxfXfc5",
+      "speaker": "aristoteles",
+      "dialogueId": "d_close_01"
+    },
+    "audio_vasileios_diff_01": {
+      "type": "audio",
+      "label": "Βασίλειος — Δημιουργία εκ του μηδενός",
+      "url": "https://drive.google.com/uc?export=download&id=1anWDNwsZqkvnjxAaWvyvSdrYENgEn6n4",
+      "speaker": "vasileios",
+      "dialogueId": "d_diff_02"
+    },
+    "audio_vasileios_sci_01": {
+      "type": "audio",
+      "label": "Βασίλειος — Παρατήρηση και δέος",
+      "url": "https://drive.google.com/uc?export=download&id=1GJBDW1YRI1mqQk7x8yKy-6ReACZsf2n3",
+      "speaker": "vasileios",
+      "dialogueId": "d_sci_02"
+    },
+    "audio_vasileios_close_01": {
+      "type": "audio",
+      "label": "Βασίλειος — Κατακλείδα",
+      "url": "https://drive.google.com/uc?export=download&id=1RYUcgY2SZUL816KHGu-89LaadpQvnUB2",
+      "speaker": "vasileios",
+      "dialogueId": "d_close_02"
+    }
+  }
+}
