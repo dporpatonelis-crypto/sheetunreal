@@ -1,0 +1,100 @@
+{
+  "project": "Philosophical Dialogues",
+  "version": "1.0",
+  "description": "Διαδραστικά φιλοσοφικά σενάρια σε Unreal Engine με MetaHuman NPCs",
+
+  "settings": {
+    "defaultLanguage": "el",
+    "subtitlesDefault": true,
+    "assetsBaseUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTeu7qez0lKK0q5KtDLdkJFUGMaBPad-2X2qlYUaYbT_Ml7WNJB8cjJPRw42CITcSYbezqsvhd1H3Wu/pub",
+    "defaultFadeTime": 1.5,
+    "defaultDialogSpeed": 50
+  },
+
+  "scenarios": [
+    {
+      "id": "vasileios_aristoteles",
+      "title": "Βασίλειος & Αριστοτέλης",
+      "subtitle": "Φιλοσοφία, Επιστήμη και Οικολογία",
+      "description": "Συνάντηση δύο κορυφαίων στοχαστών — ο Χριστιανός Πατέρας συναντά τον αρχαίο φιλόσοφο",
+      "thumbnail": "vasileios_aristoteles/thumbnail.jpg",
+      "scenarioFile": "scenarios/vasileios_aristoteles/scenario.json",
+      "sublevel": "/Game/Maps/Sublevels/SL_Vasileios_Aristoteles",
+      "assetsSheetGid": "0",
+      "characters": ["vasileios", "aristoteles"],
+      "themes": ["φιλοσοφία", "οικολογία", "επιστήμη", "ηθική"],
+      "estimatedDuration": 15,
+      "difficulty": "intermediate",
+      "environment": "ancient_library",
+      "status": "active"
+    },
+    {
+      "id": "plato_gregory",
+      "title": "Πλάτων & Γρηγόριος",
+      "subtitle": "Φιλοσοφία και Θεολογία",
+      "description": "Ο Πλάτων συνομιλεί με τον Γρηγόριο Νύσσης για τις Ιδέες, τη δημιουργία και τον προορισμό του ανθρώπου",
+      "thumbnail": "plato_gregory/thumbnail.jpg",
+      "scenarioFile": "scenarios/plato_gregory/scenario.json",
+      "sublevel": "/Game/Maps/Sublevels/SL_Plato_Gregory",
+      "assetsSheetGid": "2008527224",
+      "characters": ["plato", "gregory"],
+      "themes": ["φιλοσοφία", "θεολογία", "μεταφυσική", "ηθική"],
+      "estimatedDuration": 18,
+      "difficulty": "advanced",
+      "environment": "ancient_library",
+      "status": "active"
+    }
+  ],
+
+  "environments": {
+    "ancient_library": {
+      "label": "Αρχαία Βιβλιοθήκη",
+      "unrealLevel": "/Game/Levels/AncientLibrary",
+      "ambientSound": "/Game/Audio/Ambient/Library_Ambient",
+      "lightingPreset": "golden_hour",
+      "screensInEnvironment": [
+        {
+          "screenId": "screen_left",
+          "unrealActorTag": "EnvironmentScreen_Left",
+          "defaultContent": "mosaic_philosophy"
+        },
+        {
+          "screenId": "screen_right",
+          "unrealActorTag": "EnvironmentScreen_Right",
+          "defaultContent": "mosaic_nature"
+        }
+      ]
+    }
+  },
+
+  "characters": {
+    "vasileios": {
+      "label": "Μέγας Βασίλειος",
+      "metahumanAsset": "/Game/MetaHumans/Vasileios/BP_Vasileios",
+      "voiceLanguage": "el",
+      "defaultAnimation": "idle_thinking",
+      "era": "4ος αι. μ.Χ."
+    },
+    "aristoteles": {
+      "label": "Αριστοτέλης",
+      "metahumanAsset": "/Game/MetaHumans/Aristoteles/BP_Aristoteles",
+      "voiceLanguage": "el",
+      "defaultAnimation": "idle_standing",
+      "era": "4ος αι. π.Χ."
+    },
+    "plato": {
+      "label": "Πλάτων",
+      "metahumanAsset": "/Game/MetaHumans/Plato/BP_Plato",
+      "voiceLanguage": "el",
+      "defaultAnimation": "idle_standing",
+      "era": "4ος αι. π.Χ."
+    },
+    "gregory": {
+      "label": "Γρηγόριος Νύσσης",
+      "metahumanAsset": "/Game/MetaHumans/Gregory/BP_Gregory",
+      "voiceLanguage": "el",
+      "defaultAnimation": "idle_thinking",
+      "era": "4ος αι. μ.Χ."
+    }
+  }
+}
