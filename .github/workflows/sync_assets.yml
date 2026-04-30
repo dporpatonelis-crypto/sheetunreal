@@ -1,0 +1,135 @@
+name: Sync Assets from Google Sheet
+
+on:
+  workflow_dispatch:
+    inputs:
+      scenario_id:
+        type: choice
+        description: 'Επιλέξτε Σενάριο'
+        options:
+          - 'vasileios_aristoteles'
+        required: true
+
+jobs:
+  sync_assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Sync Assets from Sheet
+        shell: python
+        run: |
+          import csv, json, os, requests, shutil
+
+          # ── 1. Διάβασμα manifest.json για Sheet URL ──────────────────────
+          with open("manifest.json", "r", encoding="utf-8") as f:
+              manifest = json.load(f)
+
+          scenario_id = "${{ github.event.inputs.scenario_id }}"
+          scenario_meta = next((s for s in manifest["scenarios"] if s["id"] == scenario_id), None)
+
+          if not scenario_meta:
+              print(f"❌ Σενάριο '{scenario_id}' δεν βρέθηκε στο manifest.json")
+              exit(1)
+
+          gid = scenario_meta["assetsSheetGid"]
+          base_url = manifest["settings"]["assetsBaseUrl"]
+          sheet_url = f"{base_url}?gid={gid}&single=true&output=csv"
+
+          print(f"📥 Σενάριο: {scenario_meta['title']}")
+          print(f"📥 Sheet URL: {sheet_url[:80]}...")
+
+          # ── 2. Λήψη CSV ───────────────────────────────────────────────────
+          response = requests.get(sheet_url)
+          response.raise_for_status()
+          response.encoding = 'utf-8'
+
+          lines = response.text.splitlines()
+          reader = csv.DictReader(lines)
+          print(f"📋 Headers: {reader.fieldnames}")
+
+          # ── 3. Φόρτωση υπάρχοντος assets.json ────────────────────────────
+          assets_path = f"scenarios/{scenario_id}/assets.json"
+          if os.path.exists(assets_path):
+              with open(assets_path, "r", encoding="utf-8") as f:
+                  assets_data = json.load(f)
+          else:
+              assets_data = {"_comment": "Auto-generated", "assets": {}}
+
+          existing = assets_data.get("assets", {})
+
+          # ── 4. Merge από Sheet ────────────────────────────────────────────
+          # Αναμενόμενα headers στο Sheet:
+          # id | type | label | url | displayTarget | speaker | dialogueId | duration | loop | credit
+
+          asset_fields = ["type", "label", "url", "displayTarget", "speaker",
+                          "dialogueId", "duration", "loop", "credit"]
+          changes = []
+          new_assets = []
+
+          for row in reader:
+              asset_id = row.get("id", "").strip()
+              if not asset_id:
+                  continue
+
+              if asset_id in existing:
+                  # Ενημέρωση υπάρχοντος
+                  for field in asset_fields:
+                      val = row.get(field, "").strip()
+                      if val and existing[asset_id].get(field) != val:
+                          # Type conversion
+                          if field == "duration":
+                              try: val = float(val)
+                              except: pass
+                          elif field == "loop":
+                              val = val.lower() == "true"
+                          existing[asset_id][field] = val
+                          changes.append(f"  ✏️  {asset_id}.{field} → {str(val)[:50]}")
+              else:
+                  # Νέο asset
+                  new_obj = {}
+                  for field in asset_fields:
+                      val = row.get(field, "").strip()
+                      if val:
+                          if field == "duration":
+                              try: val = float(val)
+                              except: pass
+                          elif field == "loop":
+                              val = val.lower() == "true"
+                          new_obj[field] = val
+                  existing[asset_id] = new_obj
+                  new_assets.append(asset_id)
+
+          # ── 5. Αποτελέσματα ───────────────────────────────────────────────
+          if changes:
+              print(f"\n🔄 Ενημερώσεις ({len(changes)}):")
+              print("\n".join(changes[:20]))
+          else:
+              print("\n🔄 Καμία αλλαγή σε υπάρχοντα assets")
+
+          if new_assets:
+              print(f"\n➕ Νέα assets ({len(new_assets)}): {new_assets}")
+
+          # ── 6. Αποθήκευση ─────────────────────────────────────────────────
+          assets_data["assets"] = existing
+
+          if os.path.exists(assets_path):
+              shutil.copy2(assets_path, f"{assets_path}.backup")
+
+          with open(assets_path, "w", encoding="utf-8") as f:
+              json.dump(assets_data, f, indent=2, ensure_ascii=False)
+
+          print(f"\n✅ Αποθηκεύτηκε: {assets_path} ({len(existing)} assets)")
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add "scenarios/${{ github.event.inputs.scenario_id }}/assets.json"
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync assets for ${{ github.event.inputs.scenario_id }}"
+            git push
+          fi
