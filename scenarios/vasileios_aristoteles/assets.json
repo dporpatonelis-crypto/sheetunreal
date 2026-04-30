@@ -1,0 +1,119 @@
+{
+  "_comment": "Auto-generated",
+  "assets": {
+    "audio_aristoteles_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — d_intro_01",
+      "url": "https://drive.google.com/uc?export=download&id=1Nc6rCqfXfm-rj6nhilKIQAiwU6bppg72",
+      "displayTarget": "World_Audio",
+      "speaker": "aristoteles",
+      "dialogueId": "d_intro_01",
+      "duration": 4.5,
+      "loop": false
+    },
+    "audio_vasileios_01": {
+      "type": "audio",
+      "label": "Βασίλειος — d_intro_02",
+      "url": "https://drive.google.com/uc?export=download&id=1S2Yxae-9jooQv9M1bbNfA162WxLf1Ed-",
+      "displayTarget": "World_Audio",
+      "speaker": "vasileios",
+      "dialogueId": "d_intro_02",
+      "duration": 5.2,
+      "loop": false
+    },
+    "audio_aristoteles_sim_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — d_sim_01",
+      "url": "https://drive.google.com/uc?export=download&id=19vBPN6ZpMV-rKuNnSTJ94d6z4c8mN8nA",
+      "displayTarget": "World_Audio",
+      "speaker": "aristoteles",
+      "dialogueId": "d_sim_01",
+      "duration": 6.0,
+      "loop": false
+    },
+    "audio_vasileios_sim_01": {
+      "type": "audio",
+      "label": "Βασίλειος — d_sim_02",
+      "url": "https://drive.google.com/uc?export=download&id=1OFlJGO9O4qfrdC1007qMNFri0oRysSQL",
+      "displayTarget": "World_Audio",
+      "speaker": "vasileios",
+      "dialogueId": "d_sim_02",
+      "duration": 7.5,
+      "loop": false
+    },
+    "audio_aristoteles_sim_02": {
+      "type": "audio",
+      "label": "Αριστοτέλης — d_sim_03",
+      "url": "https://drive.google.com/uc?export=download&id=1KE0f51ObYfZco2srVBwnM3Yrvlp-2kcx",
+      "displayTarget": "World_Audio",
+      "speaker": "aristoteles",
+      "dialogueId": "d_sim_03",
+      "duration": 5.0,
+      "loop": false
+    },
+    "audio_aristoteles_diff_01": {
+      "type": "audio",
+      "label": "Αριστοτέλης — d_diff_01",
+      "url": "https://drive.google.com/uc?export=download&id=1vPYr0LlB6WWU5VPaGgCLPK1i__kZFAo-",
+      "displayTarget": "World_Audio",
+      "speaker": "aristoteles",
+      "dialogueId": "d_diff_01",
+      "duration": 4.0,
+      "loop": false
+    },
+    "audio_vasileios_diff_01": {
+      "type": "audio",
+      "label": "Βασίλειος — d_diff_02",
+      "url": "https://drive.google.com/uc?export=download&id=1anWDNwsZqkvnjxAaWvyvSdrYENgEn6n4",
+      "displayTarget": "World_Audio",
+      "speaker": "vasileios",
+      "dialogueId": "d_diff_02",
+      "duration": 8.0,
+      "loop": false
+    },
+    "audio_aristoteles_diff_02": {
+      "type": "audio",
+      "label": "Αριστοτέλης — d_diff_03",
+      "url": "https://drive.google.com/uc?export=download&id=1bQnP_CCaUZcgxZok5G7YPI-yMiQSqF3w",
+      "displayTarget": "World_Audio",
+      "speaker": "aristoteles",
+      "dialogueId": "d_diff_03",
+      "duration": 4.5,
+      "loop": false
+    },
+    "narration_intro": {
+      "type": "audio",
+      "label": "Narration — Intro",
+      "url": "https://drive.google.com/uc?export=download&id=1TU1Lv_nb4O4U4uVN_vMxulUxE_QNhPqd",
+      "displayTarget": "Global_Audio",
+      "speaker": "narrator",
+      "dialogueId": "act_intro",
+      "duration": 10.0,
+      "loop": false
+    },
+    "img_ancient_athens": {
+      "type": "image",
+      "label": "Background — Athens",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen",
+      "duration": 0.0,
+      "loop": false
+    },
+    "img_caesarea": {
+      "type": "image",
+      "label": "Background — Caesarea",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen",
+      "duration": 0.0,
+      "loop": false
+    },
+    "img_both_portraits": {
+      "type": "image",
+      "label": "End Card — Portraits",
+      "url": "https://i.ibb.co/k28pSzCJ/Digital-Knowledge-Archaeology-pptx-5.jpg",
+      "displayTarget": "environment_screen",
+      "duration": 0.0,
+      "loop": false
+    }
+  }
+}
