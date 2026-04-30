@@ -27,6 +27,22 @@
       "difficulty": "intermediate",
       "environment": "ancient_library",
       "status": "active"
+    },
+    {
+      "id": "plato_gregory",
+      "title": "Πλάτων & Γρηγόριος",
+      "subtitle": "Φιλοσοφία και Θεολογία",
+      "description": "Ο Πλάτων συνομιλεί με τον Γρηγόριο Νύσσης για τις Ιδέες, τη δημιουργία και τον προορισμό του ανθρώπου",
+      "thumbnail": "plato_gregory/thumbnail.jpg",
+      "scenarioFile": "scenarios/plato_gregory/scenario.json",
+      "sublevel": "/Game/Maps/Sublevels/SL_Plato_Gregory",
+      "assetsSheetGid": "1",
+      "characters": ["plato", "gregory"],
+      "themes": ["φιλοσοφία", "θεολογία", "μεταφυσική", "ηθική"],
+      "estimatedDuration": 18,
+      "difficulty": "advanced",
+      "environment": "ancient_library",
+      "status": "active"
     }
   ],
 
@@ -65,6 +81,20 @@
       "voiceLanguage": "el",
       "defaultAnimation": "idle_standing",
       "era": "4ος αι. π.Χ."
+    },
+    "plato": {
+      "label": "Πλάτων",
+      "metahumanAsset": "/Game/MetaHumans/Plato/BP_Plato",
+      "voiceLanguage": "el",
+      "defaultAnimation": "idle_standing",
+      "era": "4ος αι. π.Χ."
+    },
+    "gregory": {
+      "label": "Γρηγόριος Νύσσης",
+      "metahumanAsset": "/Game/MetaHumans/Gregory/BP_Gregory",
+      "voiceLanguage": "el",
+      "defaultAnimation": "idle_thinking",
+      "era": "4ος αι. μ.Χ."
     }
   }
 }
