@@ -6,7 +6,7 @@
   "settings": {
     "defaultLanguage": "el",
     "subtitlesDefault": true,
-    "assetsBaseUrl": "https://docs.google.com/spreadsheets/d/e/YOUR_SHEET_ID/pub",
+    "assetsBaseUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTeu7qez0lKK0q5KtDLdkJFUGMaBPad-2X2qlYUaYbT_Ml7WNJB8cjJPRw42CITcSYbezqsvhd1H3Wu/pub",
     "defaultFadeTime": 1.5,
     "defaultDialogSpeed": 50
   },
