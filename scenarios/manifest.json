@@ -36,7 +36,7 @@
       "thumbnail": "plato_gregory/thumbnail.jpg",
       "scenarioFile": "scenarios/plato_gregory/scenario.json",
       "sublevel": "/Game/Maps/Sublevels/SL_Plato_Gregory",
-      "assetsSheetGid": "1",
+      "assetsSheetGid": "2008527224",
       "characters": ["plato", "gregory"],
       "themes": ["φιλοσοφία", "θεολογία", "μεταφυσική", "ηθική"],
       "estimatedDuration": 18,
