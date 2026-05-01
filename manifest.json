@@ -20,6 +20,7 @@
       "thumbnail": "vasileios_aristoteles/thumbnail.jpg",
       "scenarioFile": "scenarios/vasileios_aristoteles/scenario.json",
       "sublevel": "/Game/Maps/Sublevels/SL_Vasileios_Aristoteles",
+      "assetsUrl": "https://raw.githubusercontent.com/dporpatonelis-crypto/sheetunreal/refs/heads/main/scenarios/vasileios_aristoteles/assets.json",
       "assetsSheetGid": "0",
       "characters": ["vasileios", "aristoteles"],
       "themes": ["φιλοσοφία", "οικολογία", "επιστήμη", "ηθική"],
@@ -36,6 +37,7 @@
       "thumbnail": "plato_gregory/thumbnail.jpg",
       "scenarioFile": "scenarios/plato_gregory/scenario.json",
       "sublevel": "/Game/Maps/Sublevels/SL_Plato_Gregory",
+      "assetsUrl": "https://raw.githubusercontent.com/dporpatonelis-crypto/sheetunreal/refs/heads/main/scenarios/plato-gregory/assets.json",
       "assetsSheetGid": "2008527224",
       "characters": ["plato", "gregory"],
       "themes": ["φιλοσοφία", "θεολογία", "μεταφυσική", "ηθική"],
@@ -52,6 +54,7 @@
       "thumbnail": "maximos_aristoteles/thumbnail.jpg",
       "scenarioFile": "scenarios/maximos_aristoteles/scenario.json",
       "sublevel": "/Game/Maps/Sublevels/SL_Maximos_Aristoteles",
+      "assetsUrl": "https://raw.githubusercontent.com/dporpatonelis-crypto/sheetunreal/refs/heads/main/scenarios/maximos_aristoteles/assets.json"
       "assetsSheetGid": "2",
       "characters": ["maximos", "aristoteles"],
       "themes": ["φιλοσοφία", "θεολογία", "κίνηση", "θέληση"],
