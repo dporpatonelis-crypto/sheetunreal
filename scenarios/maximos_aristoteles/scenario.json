@@ -1,0 +1,379 @@
+{
+  "id": "maximos_aristoteles",
+  "version": "1.0",
+  "title": "Μάξιμος Ομολογητής & Αριστοτέλης",
+  "subtitle": "Η Κίνηση της Κτίσης και η Βούληση του Προσώπου",
+
+  "characters": {
+    "maximos": {
+      "displayName": "Μάξιμος Ομολογητής",
+      "shortName": "Μάξιμος",
+      "color": "#701c1c"
+    },
+    "aristoteles": {
+      "displayName": "Αριστοτέλης",
+      "shortName": "Αριστοτέλης",
+      "color": "#1a4a8b"
+    }
+  },
+
+  "acts": [
+
+    {
+      "id": "act_intro",
+      "title": "Εισαγωγή",
+      "type": "cinematic",
+      "camera": {
+        "shot": "wide",
+        "unrealSequence": "/Game/Cinematics/VA_Intro"
+      },
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_ancient_athens",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_caesarea",
+          "transition": "fade"
+        }
+      },
+      "narration": {
+        "text": "Δύο στοχαστές. Χίλια χρόνια χωρίζουν τις εποχές τους. Ένα ερώτημα ενώνει την αναζήτησή τους: Τι είναι η κίνηση;",
+        "audioUrl": "{{narration_intro}}",
+        "subtitle": true
+      },
+      "dialogues": [
+        {
+          "id": "d_intro_01",
+          "speaker": "aristoteles",
+          "text": "Μέγιστε Μάξιμε, λέγεται ότι εμβάθυνες στη φιλοσοφία της κίνησης. Ποια είναι η πηγή της κατά τη γνώμη σου;",
+          "audioUrl": "{{audio_aristoteles_01}}",
+          "animation": "gesture_welcome",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_intro_02",
+          "speaker": "maximos",
+          "text": "Η κίνηση πηγάζει από τον ίδιο τον Θεό, ως η δύναμη που ωθεί κάθε κτίσμα από το μη ον προς το είναι, και από το είναι προς το ευ είναι.",
+          "audioUrl": "{{audio_vasileios_01}}",
+          "animation": "gesture_thoughtful",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        }
+      ]
+    },
+
+    {
+      "id": "act_similarities",
+      "title": "Πράξη Α': Η Φύση της Κίνησης (Συμφωνία)",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_cosmos_order",
+          "transition": "slide"
+        },
+        "screen_right": {
+          "contentId": "img_hexaemeron",
+          "transition": "slide"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_sim_01",
+          "speaker": "aristoteles",
+          "text": "Ορίζω την κίνηση ως την «εντελέχεια του δυνάμει όντος». Τα πάντα στον κόσμο τείνουν προς την ολοκλήρωση της φύσης τους μέσω της κίνησης, αναζητώντας το «πρώτον κινούν ακίνητον».",
+          "audioUrl": "{{audio_aristoteles_sim_01}}",
+          "animation": "gesture_explain",
+          "camera": "close_aristoteles",
+          "subtitle": true,
+          "highlightTerm": {
+            "term": "εντελέχεια",
+            "definition": "Η πραγματοποίηση αυτού που υπάρχει σε δυνατότητα",
+            "displayOnScreen": "screen_right"
+          }
+        },
+        {
+          "id": "d_sim_02",
+          "speaker": "maximos",
+          "text": "Συμφωνώ, φιλόσοφε. Ολόκληρος ο κόσμος είναι πράγματι «εν κινήσει» και μοχθεί διαρκώς. Η κίνηση είναι το χαρακτηριστικό της κτιστής φύσης που την εμποδίζει να παραμείνει στάσιμη και την ωθεί προς τον σκοπό της.",
+          "audioUrl": "{{audio_vasileios_sim_01}}",
+          "animation": "gesture_agree",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_sim_03",
+          "speaker": "aristoteles",
+          "text": "Χαίρομαι που βρίσκω σύμφωνο ακροατή. Συνεχίζουμε, λοιπόν.",
+          "audioUrl": "{{audio_aristoteles_sim_02}}",
+          "animation": "idle_thinking",
+          "camera": "medium_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Τι θέλεις να εξετάσεις στη συνέχεια;",
+        "displayStyle": "radial_menu",
+        "choices": [
+          {
+            "id": "choice_science",
+            "label": "Πράξη Β': Ο Θεός και η Σχέση →",
+            "icon": "icon_science",
+            "nextAct": "act_science_faith"
+          },
+          {
+            "id": "choice_differences",
+            "label": "Πράξη Γ': Λόγοι και Θέωση →",
+            "icon": "icon_debate",
+            "nextAct": "act_differences"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_differences",
+      "title": "Πράξη Γ': Οι Λόγοι των Όντων και η Θέωση (Η Σύνθεση)",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_eternal_cosmos",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_creation_ex_nihilo",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_diff_01",
+          "speaker": "aristoteles",
+          "text": "Μίλησα για τις «μορφές» που δίνουν ταυτότητα στην ύλη. Είναι αυτές η αιτία της κίνησης;",
+          "audioUrl": "{{audio_aristoteles_diff_01}}",
+          "animation": "gesture_firm",
+          "camera": "close_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_diff_02",
+          "speaker": "maximos",
+          "text": "Τις ονομάζω «Λόγους των όντων». Κάθε κτίσμα έχει έναν «λόγο» μέσα στον Θεό, ένα θείο θέλημα που αποτελεί την αρχή, το κέντρο και τον τελικό του σκοπό. Η κίνηση του ανθρώπου ολοκληρώνεται όταν η ανθρώπινη θέλησή του ευθυγραμμιστεί ελεύθερα με αυτόν τον θείο Λόγο.",
+          "audioUrl": "{{audio_vasileios_diff_01}}",
+          "animation": "gesture_disagree",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_diff_03",
+          "speaker": "aristoteles",
+          "text": "Άρα η κίνηση δεν είναι απλώς βιολογική ή φυσική, αλλά ηθική και πνευματική;",
+          "audioUrl": "{{audio_aristoteles_diff_02}}",
+          "animation": "gesture_concede",
+          "camera": "medium_both",
+          "subtitle": true
+        },
+        {
+          "id": "d_diff_04",
+          "speaker": "maximos",
+          "text": "Ακριβώς. Είναι μια πορεία από το «είναι» στο «ευ είναι» και τελικά στο «αεί ευ είναι», τη Θέωση. Η κίνηση σταματά μόνο όταν το κτιστό ενωθεί με το Άκτιστο, όχι καταργώντας τη φύση του, αλλά μεταμορφώνοντάς την σε κάτι αιώνιο.",
+          "audioUrl": "{{audio_vasileios_eco_02}}",
+          "animation": "gesture_passionate",
+          "camera": "wide_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_ecology",
+            "label": "→ Πράξη Β' (Διαφωνία)",
+            "nextAct": "act_ecology"
+          },
+          {
+            "id": "to_closing",
+            "label": "Προς την κατακλείδα →",
+            "nextAct": "act_closing"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_ecology",
+      "title": "Πράξη Β': Ο Θεός και η Σχέση με τον Κόσμο (Διαφωνία)",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "video_deforestation",
+          "type": "video",
+          "transition": "fade",
+          "autoplay": true,
+          "loop": false
+        },
+        "screen_right": {
+          "contentId": "img_natural_world",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_eco_01",
+          "speaker": "aristoteles",
+          "text": "Όμως ο Θεός μου είναι υπεράνω κινήσεως, μια καθαρή νόηση που νοεί τον εαυτό της, χωρίς να μεταβάλλεται ή να παρεμβαίνει στον κόσμο.",
+          "audioUrl": "{{audio_vasileios_eco_01}}",
+          "animation": "gesture_concern",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_eco_02",
+          "speaker": "maximos",
+          "text": "Εδώ η πίστη μας διαφοροποιείται. Ο δικός μας Θεός, αν και ακίνητος κατ' ουσίαν, «κινείται» προς τον κόσμο μέσω της αγάπης Του. Η Ενανθρώπηση είναι η ύψιστη κίνηση του Θεού προς τον άνθρωπο, ώστε η ανθρώπινη φύση να ενωθεί με τη θεία. Ο Θεός δεν είναι απλώς ένας παρατηρητής, αλλά ο Σωτήρας που ενεργεί μέσα στην ιστορία.",
+          "audioUrl": "{{audio_aristoteles_eco_01}}",
+          "animation": "gesture_serious",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_eco_03",
+          "speaker": "aristoteles",
+          "text": "Μια ενδιαφέρουσα οπτική. Δεν την είχα σκεφτεί με αυτόν τον τρόπο.",
+          "audioUrl": "{{audio_vasileios_eco_02}}",
+          "animation": "gesture_agree",
+          "camera": "wide_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_science",
+            "label": "→ Πράξη Γ' (Σύνθεση)",
+            "nextAct": "act_science_faith"
+          },
+          {
+            "id": "to_closing",
+            "label": "Προς την κατακλείδα →",
+            "nextAct": "act_closing"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_science_faith",
+      "title": "Πράξη Β' (συνέχεια) – Διάλογος για την Αγάπη",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_aristoteles_biology",
+          "transition": "slide"
+        },
+        "screen_right": {
+          "contentId": "img_hexaemeron_manuscript",
+          "transition": "slide"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_sci_01",
+          "speaker": "maximos",
+          "text": "Η αγάπη είναι η κινητήρια δύναμη που ωθεί τον Θεό να δημιουργήσει και να σώσει. Χωρίς αγάπη, η κίνηση θα ήταν τυφλή μηχανισμός.",
+          "audioUrl": "{{audio_aristoteles_sci_01}}",
+          "animation": "gesture_explain",
+          "camera": "close_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_sci_02",
+          "speaker": "aristoteles",
+          "text": "Στη δική μου φιλοσοφία η αγάπη του Θεού είναι αυτοαγάπη (νόησις νοήσεως), όχι σχέση με τον κόσμο. Αλλά κατανοώ τη διαφορά μας.",
+          "audioUrl": "{{audio_vasileios_sci_01}}",
+          "animation": "gesture_passionate",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_sci_03",
+          "speaker": "maximos",
+          "text": "Ακόμα κι έτσι, και οι δύο συμφωνούμε ότι η κίνηση έχει νόημα και κατεύθυνση. Αυτό μας ενώνει.",
+          "audioUrl": "{{audio_aristoteles_sci_02}}",
+          "animation": "gesture_smile",
+          "camera": "medium_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_closing",
+            "label": "Κατακλείδα →",
+            "nextAct": "act_closing"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_closing",
+      "title": "Κατακλείδα",
+      "type": "cinematic",
+      "camera": {
+        "shot": "wide_slow_pullback",
+        "unrealSequence": "/Game/Cinematics/VA_Closing"
+      },
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_both_portraits",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_earth_from_space",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_close_01",
+          "speaker": "aristoteles",
+          "text": "Μέγιστε Μάξιμε, η συνομιλία μας με έκανε να δω την κίνηση υπό νέο φως.",
+          "audioUrl": "{{audio_aristoteles_close_01}}",
+          "animation": "gesture_bow",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_close_02",
+          "speaker": "maximos",
+          "text": "Κι εγώ, Αριστοτέλη, διδάχθηκα από τη μεθοδικότητά σου. Η αλήθεια είναι πάντα μεγαλύτερη από έναν μόνο δρόμο.",
+          "audioUrl": "{{audio_vasileios_close_01}}",
+          "animation": "gesture_bow",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        }
+      ],
+      "narration": {
+        "text": "Δύο στοχαστές. Χίλια χρόνια. Μία συνομιλία για την κίνηση που γίνεται πορεία προς την αλήθεια.",
+        "audioUrl": "{{narration_closing}}",
+        "subtitle": true
+      },
+      "endCard": {
+        "display": true,
+        "backgroundImage": "img_both_portraits",
+        "lines": [
+          "Μάξιμος Ομολογητής (580–662 μ.Χ.) — Θεολόγος, Πατέρας της Εκκλησίας",
+          "Αριστοτέλης (384–322 π.Χ.) — Φιλόσοφος, θεμελιωτής της φυσικής επιστήμης"
+        ],
+        "nextScenario": null
+      }
+    }
+  ]
+}
