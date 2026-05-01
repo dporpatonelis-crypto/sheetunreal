@@ -43,7 +43,23 @@
       "difficulty": "advanced",
       "environment": "ancient_library",
       "status": "active"
-    }
+    },
+    {
+      "id": "maximos_aristoteles",
+      "title": "Μάξιμος Ομολογητής & Αριστοτέλης",
+      "subtitle": "Κίνηση, Θέληση και Θέωση",
+      "description": "Ο Μάξιμος συνομιλεί με τον Αριστοτέλη για τη φύση της κίνησης και τον προορισμό του ανθρώπου",
+      "thumbnail": "maximos_aristoteles/thumbnail.jpg",
+      "scenarioFile": "scenarios/maximos_aristoteles/scenario.json",
+      "sublevel": "/Game/Maps/Sublevels/SL_Maximos_Aristoteles",
+      "assetsSheetGid": "2",
+      "characters": ["maximos", "aristoteles"],
+      "themes": ["φιλοσοφία", "θεολογία", "κίνηση", "θέληση"],
+      "estimatedDuration": 20,
+      "difficulty": "advanced",
+      "environment": "ancient_library",
+      "status": "draft"
+    },
   ],
 
   "environments": {
@@ -53,48 +69,17 @@
       "ambientSound": "/Game/Audio/Ambient/Library_Ambient",
       "lightingPreset": "golden_hour",
       "screensInEnvironment": [
-        {
-          "screenId": "screen_left",
-          "unrealActorTag": "EnvironmentScreen_Left",
-          "defaultContent": "mosaic_philosophy"
-        },
-        {
-          "screenId": "screen_right",
-          "unrealActorTag": "EnvironmentScreen_Right",
-          "defaultContent": "mosaic_nature"
-        }
+        { "screenId": "screen_left", "unrealActorTag": "EnvironmentScreen_Left", "defaultContent": "mosaic_philosophy" },
+        { "screenId": "screen_right", "unrealActorTag": "EnvironmentScreen_Right", "defaultContent": "mosaic_nature" }
       ]
     }
   },
 
   "characters": {
-    "vasileios": {
-      "label": "Μέγας Βασίλειος",
-      "metahumanAsset": "/Game/MetaHumans/Vasileios/BP_Vasileios",
-      "voiceLanguage": "el",
-      "defaultAnimation": "idle_thinking",
-      "era": "4ος αι. μ.Χ."
-    },
-    "aristoteles": {
-      "label": "Αριστοτέλης",
-      "metahumanAsset": "/Game/MetaHumans/Aristoteles/BP_Aristoteles",
-      "voiceLanguage": "el",
-      "defaultAnimation": "idle_standing",
-      "era": "4ος αι. π.Χ."
-    },
-    "plato": {
-      "label": "Πλάτων",
-      "metahumanAsset": "/Game/MetaHumans/Plato/BP_Plato",
-      "voiceLanguage": "el",
-      "defaultAnimation": "idle_standing",
-      "era": "4ος αι. π.Χ."
-    },
-    "gregory": {
-      "label": "Γρηγόριος Νύσσης",
-      "metahumanAsset": "/Game/MetaHumans/Gregory/BP_Gregory",
-      "voiceLanguage": "el",
-      "defaultAnimation": "idle_thinking",
-      "era": "4ος αι. μ.Χ."
-    }
+    "vasileios": { "label": "Μέγας Βασίλειος", "metahumanAsset": "/Game/MetaHumans/Vasileios/BP_Vasileios", "voiceLanguage": "el", "defaultAnimation": "idle_thinking", "era": "4ος αι. μ.Χ." },
+    "aristoteles": { "label": "Αριστοτέλης", "metahumanAsset": "/Game/MetaHumans/Aristoteles/BP_Aristoteles", "voiceLanguage": "el", "defaultAnimation": "idle_standing", "era": "4ος αι. π.Χ." },
+    "plato": { "label": "Πλάτων", "metahumanAsset": "/Game/MetaHumans/Plato/BP_Plato", "voiceLanguage": "el", "defaultAnimation": "idle_standing", "era": "4ος αι. π.Χ." },
+    "gregory": { "label": "Γρηγόριος Νύσσης", "metahumanAsset": "/Game/MetaHumans/Gregory/BP_Gregory", "voiceLanguage": "el", "defaultAnimation": "idle_thinking", "era": "4ος αι. μ.Χ." },
+    "maximos": { "label": "Μάξιμος Ομολογητής", "metahumanAsset": "/Game/MetaHumans/Maximos/BP_Maximos", "voiceLanguage": "el", "defaultAnimation": "idle_thinking", "era": "7ος αι. μ.Χ." }
   }
 }
