@@ -1,0 +1,395 @@
+{
+  "id": "plato_gregory",
+  "version": "1.0",
+  "title": "Πλάτων & Γρηγόριος",
+  "subtitle": "Φιλοσοφία και Θεολογία",
+
+  "characters": {
+    "gregory": {
+      "displayName": "Γρηγόριος Νύσσης",
+      "shortName": "Γρηγόριος",
+      "color": "#8B4513"
+    },
+    "plato": {
+      "displayName": "Πλάτων",
+      "shortName": "Πλάτων",
+      "color": "#1a4a8b"
+    }
+  },
+
+  "acts": [
+
+    {
+      "id": "act_intro",
+      "title": "Εισαγωγή",
+      "type": "cinematic",
+      "camera": {
+        "shot": "wide",
+        "unrealSequence": "/Game/Cinematics/VA_Intro"
+      },
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_ancient_athens",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_caesarea",
+          "transition": "fade"
+        }
+      },
+      "narration": {
+        "text": "Δύο κόσμοι. Επτά αιώνες απόσταση. Μία συνομιλία που δεν έγινε ποτέ — αλλά θα έπρεπε.",
+        "audioUrl": "{{narration_intro}}",
+        "subtitle": true
+      },
+      "dialogues": [
+        {
+          "id": "d_intro_01",
+          "speaker": "plato",
+          "text": "Λέγεται πως σπούδασες στην Αθήνα. Ποιος σε ώθησε να έρθεις στον τόπο μας;",
+          "audioUrl": "{{audio_aristoteles_01}}",
+          "animation": "gesture_welcome",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_intro_02",
+          "speaker": "gregory",
+          "text": "Η δίψα για σοφία. Αλλά και η ανάγκη να καταλάβω τι διαχωρίζει τη γνώση από την αλήθεια.",
+          "audioUrl": "{{audio_vasileios_01}}",
+          "animation": "gesture_thoughtful",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        }
+      ]
+    },
+
+    {
+      "id": "act_similarities",
+      "title": "Πράξη Α': Η Φύση του Όντος και η Κτίση",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_cosmos_order",
+          "transition": "slide"
+        },
+        "screen_right": {
+          "contentId": "img_hexaemeron",
+          "transition": "slide"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_sim_01",
+          "speaker": "plato",
+          "text": "Διδάσκω ότι το «όντως ον» βρίσκεται στον κόσμο των Ιδεών, στο νοητό γένος που είναι αμετάβλητο και αιώνιο. Ο αισθητός κόσμος που βλέπουμε είναι απλώς μια σκιά, ένα αντίγραφο.",
+          "audioUrl": "{{audio_aristoteles_sim_01}}",
+          "animation": "gesture_explain",
+          "camera": "close_aristoteles",
+          "subtitle": true,
+          "highlightTerm": {
+            "term": "τελεολογία",
+            "definition": "Η θεωρία ότι κάθε ον κινείται προς έναν σκοπό/τέλος",
+            "displayOnScreen": "screen_right"
+          }
+        },
+        {
+          "id": "d_sim_02",
+          "speaker": "gregory",
+          "text": "Θαυμάζω τη διάκρισή σου μεταξύ νοητού και ορατού, αλλά για εμάς η βασική τομή δεν είναι μεταξύ ύλης και ιδέας, αλλά μεταξύ Ακτίστου και Κτιστού. Η αληθινή ύπαρξη ανήκει μόνο στον Θεό.",
+          "audioUrl": "{{audio_vasileios_sim_01}}",
+          "animation": "gesture_agree",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_sim_03",
+          "speaker": "plato",
+          "text": "Αλλά ο κόσμος δεν είναι αιώνιος; Η ύλη δεν προϋπάρχει για να μορφοποιηθεί από τον δημιουργό;",
+          "audioUrl": "{{audio_aristoteles_sim_02}}",
+          "animation": "idle_thinking",
+          "camera": "medium_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Τι σε ενδιαφέρει να εξερευνήσεις;",
+        "displayStyle": "radial_menu",
+        "choices": [
+          {
+            "id": "choice_science",
+            "label": "Η Φύση του Όντος και η Κτίση",
+            "icon": "icon_science",
+            "nextAct": "act_science_faith"
+          },
+	{
+            "id": "choice_differences",
+            "label": "Το Άπειρο και το Ακατάληπτο",
+            "icon": "icon_debate",
+            "nextAct": "act_differences"
+          },
+          {
+            "id": "choice_ecology",
+            "label": "Η Πορεία του Ανθρώπου (Επέκταση)",
+            "icon": "icon_ecology",
+            "nextAct": "act_ecology"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_differences",
+      "title": "Πράξη Β': Το Άπειρο και το Ακατάληπτο",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_eternal_cosmos",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_creation_ex_nihilo",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_diff_01",
+          "speaker": "plato",
+          "text": "Αλλά ο κόσμος δεν είναι αιώνιος; Η ύλη δεν προϋπάρχει για να μορφοποιηθεί από τον δημιουργό;",
+          "audioUrl": "{{audio_aristoteles_diff_01}}",
+          "animation": "gesture_firm",
+          "camera": "close_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_diff_02",
+          "speaker": "gregory",
+          "text": "Όχι, φίλε μου. Ο Θεός δημιούργησε τα πάντα «εκ του μηδενός». Η ύλη δεν είναι αιώνια, αλλά είναι το αποτέλεσμα της θείας βούλησης, ένα «άθροισμα ιδιοτήτων» που έλαβε υπόσταση από τον Λόγο.",
+          "audioUrl": "{{audio_vasileios_diff_01}}",
+          "animation": "gesture_disagree",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_diff_03",
+          "speaker": "plato",
+          "text": "Εντούτοις, και οι δύο συμφωνούμε ότι υπάρχει μια αρχή πέρα από την ύλη. Ίσως η διαφορά μας είναι μικρότερη από ό,τι νομίζουμε.",
+          "audioUrl": "{{audio_aristoteles_diff_02}}",
+          "animation": "gesture_concede",
+          "camera": "medium_both",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_ecology",
+            "label": "Η Πορεία του Ανθρώπου (Επέκταση) →",
+            "nextAct": "act_ecology"
+          },
+          {
+            "id": "to_science",
+            "label": "Η Φύση του Όντος και η Κτίση →",
+            "nextAct": "act_science_faith"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_ecology",
+      "title": "Πράξη Γ': Η Πορεία του Ανθρώπου (Επέκταση)",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "video_deforestation",
+          "type": "video",
+          "transition": "fade",
+          "autoplay": true,
+          "loop": false
+        },
+        "screen_right": {
+          "contentId": "img_natural_world",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_eco_01",
+          "speaker": "plato",
+          "text": "Στην «Πολιτεία» μου, παρομοίασα το Αγαθό με τον Ήλιο που φωτίζει την αλήθεια. Ο νους μπορεί να αναχθεί σε αυτή την ύψιστη αρχή μέσω της διαλεκτικής.",
+          "audioUrl": "{{audio_vasileios_eco_01}}",
+          "animation": "gesture_concern",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_eco_02",
+          "speaker": "gregory",
+          "text": "Συμφωνώ ότι ο Θεός είναι το φως, αλλά διδάσκω ότι η θεία φύση είναι «άπειρος και αόριστος». Παραμένει ακατάληπτη στην ουσία της για τον πεπερασμένο ανθρώπινο νου.",
+          "audioUrl": "{{audio_aristoteles_eco_01}}",
+          "animation": "gesture_serious",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_eco_03",
+          "speaker": "plato",
+          "text": "Αν είναι ακατάληπτος, τότε πώς μπορούμε να Τον γνωρίσουμε;",
+          "audioUrl": "{{audio_vasileios_eco_02}}",
+          "animation": "gesture_agree",
+          "camera": "wide_both",
+          "subtitle": true
+        },
+	{
+          "id": "d_eco_04",
+          "speaker": "gregory",
+          "text": "Ο Θεός «ενεργείαις γνωρίζεται». Γνωρίζουμε τη σοφία και τη δύναμή Του μέσα από τα έργα Του στην κτίση, αλλά η ουσία Του παραμένει απρόσιτη. Η γνώση είναι ένας διαρκής «θαυμασμός».",
+          "audioUrl": "{{audio_aristoteles_eco_02}}",
+          "animation": "gesture_serious",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_science",
+            "label": "Η Φύση του Όντος και η Κτίση →",
+            "nextAct": "act_science_faith"
+          },
+          {
+            "id": "to_closing",
+            "label": "Προς την κατακλείδα →",
+            "nextAct": "act_closing"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_science_faith",
+      "title": "Πράξη Γ': Η Πορεία του Ανθρώπου (Επέκταση)",
+      "type": "interactive",
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_aristoteles_biology",
+          "transition": "slide"
+        },
+        "screen_right": {
+          "contentId": "img_hexaemeron_manuscript",
+          "transition": "slide"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_sci_01",
+          "speaker": "plato",
+          "text": "Ο σκοπός του φιλοσόφου είναι η απελευθέρωση της ψυχής από τα δεσμά του σώματος, η φυγή προς τα άνω.",
+          "audioUrl": "{{audio_aristoteles_sci_01}}",
+          "animation": "gesture_explain",
+          "camera": "close_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_sci_02",
+          "speaker": "gregory",
+          "text": "Για εμάς, ο άνθρωπος είναι «κατ’ εικόνα Θεού». Η πορεία του δεν είναι φυγή από το σώμα, αλλά μεταμόρφωση ολόκληρης της ύπαρξης. Και επειδή ο Θεός είναι άπειρος, η άνοδος του ανθρώπου δεν έχει τέλος.",
+          "audioUrl": "{{audio_vasileios_sci_01}}",
+          "animation": "gesture_passionate",
+          "camera": "close_vasileios",
+          "subtitle": true
+        },
+        {
+          "id": "d_sci_03",
+          "speaker": "plato",
+          "text": "Μια ατέρμονη κίνηση προς το θείον;",
+          "audioUrl": "{{audio_aristoteles_sci_02}}",
+          "animation": "gesture_smile",
+          "camera": "medium_both",
+          "subtitle": true
+        },
+	{
+          "id": "d_sci_04",
+          "speaker": "gregory",
+          "text": "Ακριβώς. Την ονομάζω «Επέκταση». Ο άνθρωπος εισέρχεται στον «γνόφο» της θεογνωσίας και όσο περισσότερο προχωρά, τόσο περισσότερο επιθυμεί. Είναι μια αιώνια πρόοδος στην αγάπη του Ακτίστου.",
+          "audioUrl": "{{audio_vasileios_sci_02}}",
+          "animation": "gesture_passionate",
+          "camera": "close_vasileios",
+          "subtitle": true
+        }
+      ],
+      "playerChoice": {
+        "prompt": "Συνέχεια:",
+        "displayStyle": "bottom_bar",
+        "choices": [
+          {
+            "id": "to_closing",
+            "label": "Κατακλείδα →",
+            "nextAct": "act_closing"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "act_closing",
+      "title": "Κατακλείδα",
+      "type": "cinematic",
+      "camera": {
+        "shot": "wide_slow_pullback",
+        "unrealSequence": "/Game/Cinematics/VA_Closing"
+      },
+      "environmentScreens": {
+        "screen_left": {
+          "contentId": "img_both_portraits",
+          "transition": "fade"
+        },
+        "screen_right": {
+          "contentId": "img_earth_from_space",
+          "transition": "fade"
+        }
+      },
+      "dialogues": [
+        {
+          "id": "d_close_01",
+          "speaker": "plato",
+          "text": "Έχουμε περισσότερα κοινά από ό,τι νόμιζα.",
+          "audioUrl": "{{audio_aristoteles_close_01}}",
+          "animation": "gesture_bow",
+          "camera": "medium_aristoteles",
+          "subtitle": true
+        },
+        {
+          "id": "d_close_02",
+          "speaker": "gregory",
+          "text": "Η αναζήτηση της αλήθειας δεν έχει εποχή. Ούτε σύνορα.",
+          "audioUrl": "{{audio_vasileios_close_01}}",
+          "animation": "gesture_bow",
+          "camera": "medium_vasileios",
+          "subtitle": true
+        }
+      ],
+      "narration": {
+        "text": "Δύο άνθρωποι. Δύο παραδόσεις. Μία πρόσκληση: να ερευνήσουμε την εξέλιξη των ιδεών.",
+        "audioUrl": "{{narration_closing}}",
+        "subtitle": true
+      },
+      "endCard": {
+        "display": true,
+        "backgroundImage": "img_both_portraits",
+        "lines": [
+          "Μέγας Βασίλειος (330–379 μ.Χ.) — Επίσκοπος Καισαρείας, Πατέρας της Εκκλησίας",
+          "Αριστοτέλης (384–322 π.Χ.) — Φιλόσοφος, Πατέρας της Φυσικής Επιστήμης"
+        ],
+        "nextScenario": null
+      }
+    }
+
+  ]
+}
