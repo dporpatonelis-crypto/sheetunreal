@@ -54,7 +54,7 @@
       "thumbnail": "maximos_aristoteles/thumbnail.jpg",
       "scenarioFile": "scenarios/maximos_aristoteles/scenario.json",
       "sublevel": "/Game/Maps/Sublevels/SL_Maximos_Aristoteles",
-      "assetsUrl": "https://raw.githubusercontent.com/dporpatonelis-crypto/sheetunreal/refs/heads/main/scenarios/maximos_aristoteles/assets.json"
+      "assetsUrl": "https://raw.githubusercontent.com/dporpatonelis-crypto/sheetunreal/refs/heads/main/scenarios/maximos_aristoteles/assets.json",
       "assetsSheetGid": "2",
       "characters": ["maximos", "aristoteles"],
       "themes": ["φιλοσοφία", "θεολογία", "κίνηση", "θέληση"],
@@ -62,7 +62,7 @@
       "difficulty": "advanced",
       "environment": "ancient_library",
       "status": "draft"
-    },
+    }
   ],
 
   "environments": {
