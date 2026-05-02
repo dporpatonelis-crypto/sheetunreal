@@ -99,35 +99,35 @@
     "audio_aristoteles_sim_01": {
       "type": "audio",
       "label": "Αριστοτέλης — Τελεολογία",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id/19vBPN6ZpMV-rKuNnSTJ94d6z4c8mN8nA",
       "speaker": "aristoteles",
       "dialogueId": "d_sim_01"
     },
     "audio_vasileios_sim_01": {
       "type": "audio",
       "label": "Βασίλειος — Εξαήμερος",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id=/1OFlJGO9O4qfrdC1007qMNFri0oRysSQL",
       "speaker": "vasileios",
       "dialogueId": "d_sim_02"
     },
     "audio_aristoteles_eco_01": {
       "type": "audio",
       "label": "Αριστοτέλης — Οικολογία",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id/1CrcHAIOuk3BSjCUfQ26gZ7LeUpMZfDPe",
       "speaker": "aristoteles",
       "dialogueId": "d_eco_02"
     },
     "audio_vasileios_eco_01": {
       "type": "audio",
       "label": "Βασίλειος — Οικονόμοι της Γης",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id=/1bHEU6NklhEcWPWq80MP8r4_TCFNZ_jbE",
       "speaker": "vasileios",
       "dialogueId": "d_eco_01"
     },
     "audio_vasileios_eco_02": {
       "type": "audio",
       "label": "Βασίλειος — Πλεονεξία",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id=/1_-EIrTu6AMNkL6FMJPoKEyliuMp5pXfP",
       "speaker": "vasileios",
       "dialogueId": "d_eco_03"
     },
@@ -146,63 +146,63 @@
     "audio_aristoteles_sim_02": {
       "type": "audio",
       "label": "Αριστοτέλης — Παρατήρηση φύσης (500 είδη)",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id/1KE0f51ObYfZco2srVBwnM3Yrvlp-2kcx",
       "speaker": "aristoteles",
       "dialogueId": "d_sim_03"
     },
     "audio_aristoteles_diff_01": {
       "type": "audio",
       "label": "Αριστοτέλης — Αιώνιος κόσμος",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id/1vPYr0LlB6WWU5VPaGgCLPK1i__kZFAo-",
       "speaker": "aristoteles",
       "dialogueId": "d_diff_01"
     },
     "audio_aristoteles_diff_02": {
       "type": "audio",
       "label": "Αριστοτέλης — Αρχή πέρα από ύλη",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id/1bQnP_CCaUZcgxZok5G7YPI-yMiQSqF3w",
       "speaker": "aristoteles",
       "dialogueId": "d_diff_03"
     },
     "audio_aristoteles_sci_01": {
       "type": "audio",
       "label": "Αριστοτέλης — Μέθοδος παρατήρησης",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id/1Nw7KSvLCL7Tuef7okM92yoiUEUXhSoTo",
       "speaker": "aristoteles",
       "dialogueId": "d_sci_01"
     },
     "audio_aristoteles_sci_02": {
       "type": "audio",
       "label": "Αριστοτέλης — Θαυμάζειν",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id/1vaE1yQdm7gn0p9Qo6HpQWk7Oxyv85Gpw",
       "speaker": "aristoteles",
       "dialogueId": "d_sci_03"
     },
     "audio_aristoteles_close_01": {
       "type": "audio",
       "label": "Αριστοτέλης — Κατακλείδα",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id/1R8eFHSs8yn4TkI-ByDA9Nxj2bOxfXfc5",
       "speaker": "aristoteles",
       "dialogueId": "d_close_01"
     },
     "audio_vasileios_diff_01": {
       "type": "audio",
       "label": "Βασίλειος — Δημιουργία εκ του μηδενός",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id=/1anWDNwsZqkvnjxAaWvyvSdrYENgEn6n4",
       "speaker": "vasileios",
       "dialogueId": "d_diff_02"
     },
     "audio_vasileios_sci_01": {
       "type": "audio",
       "label": "Βασίλειος — Παρατήρηση και δέος",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id=/1GJBDW1YRI1mqQk7x8yKy-6ReACZsf2n3",
       "speaker": "vasileios",
       "dialogueId": "d_sci_02"
     },
     "audio_vasileios_close_01": {
       "type": "audio",
       "label": "Βασίλειος — Κατακλείδα",
-      "url": "",
+      "url": "https://drive.google.com/uc?export=download&id=/1RYUcgY2SZUL816KHGu-89LaadpQvnUB2",
       "speaker": "vasileios",
       "dialogueId": "d_close_02"
     }
